@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "medicamentos",
+  "info": {
+    "singularName": "medicamento",
+    "pluralName": "medicamentos",
+    "displayName": "Medicamento",
+    "description": "Medicamentos vigilados en el estudio de farmacovigilancia"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": { "type": "string", "required": true, "unique": true },
+    "principioActivo": { "type": "string", "required": true },
+    "familia": {
+      "type": "enumeration",
+      "enum": ["Analgésico", "AINE", "Antibiótico", "Antidiabético", "En investigación"]
+    },
+    "presentacion": { "type": "string" }
+  }
+}

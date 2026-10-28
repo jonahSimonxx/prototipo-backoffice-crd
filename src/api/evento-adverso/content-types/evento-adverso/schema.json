@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eventos_adversos",
+  "info": {
+    "singularName": "evento-adverso",
+    "pluralName": "eventos-adversos",
+    "displayName": "Evento Adverso",
+    "description": "Eventos adversos notificados durante el estudio"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "descripcion": { "type": "text", "required": true },
+    "tipo": {
+      "type": "enumeration",
+      "enum": ["Hepatotoxicidad", "Reacción cutánea", "Trastorno gastrointestinal", "Cefalea", "Reacción anafiláctica"],
+      "required": true
+    },
+    "gravedad": {
+      "type": "enumeration",
+      "enum": ["leve", "moderada", "grave"],
+      "required": true,
+      "default": "leve"
+    },
+    "fecha": { "type": "datetime", "required": true },
+    "paciente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::paciente.paciente"
+    },
+    "medicamento": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::medicamento.medicamento"
+    }
+  }
+}

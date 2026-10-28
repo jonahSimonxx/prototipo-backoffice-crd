@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "administraciones_medicamento",
+  "info": {
+    "singularName": "administracion-medicamento",
+    "pluralName": "administraciones-medicamento",
+    "displayName": "Administración de Medicamento",
+    "description": "Registro de administración de un medicamento a un paciente"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "fecha": { "type": "datetime", "required": true },
+    "dosis": { "type": "string" },
+    "via": {
+      "type": "enumeration",
+      "enum": ["oral", "intravenosa", "intramuscular", "tópica"]
+    },
+    "paciente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::paciente.paciente"
+    },
+    "medicamento": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::medicamento.medicamento"
+    }
+  }
+}

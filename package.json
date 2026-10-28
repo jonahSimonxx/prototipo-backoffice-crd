@@ -1,0 +1,29 @@
+{
+  "name": "prototipo-backoffice-crd",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Prototipo backoffice (Strapi 5) del sistema CRD de farmacovigilancia: control de acceso por roles (RBAC) y analisis estadistico con mineria de datos (PRR, ROR, chi-cuadrado). Generado con IA.",
+  "scripts": {
+    "develop": "strapi develop",
+    "dev": "strapi develop",
+    "build": "strapi build",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-users-permissions": "^5.40.0",
+    "@strapi/strapi": "^5.40.0",
+    "better-sqlite3": "^11.3.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20.0.0 <=24.x.x"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pacientes",
+  "info": {
+    "singularName": "paciente",
+    "pluralName": "pacientes",
+    "displayName": "Paciente",
+    "description": "Pacientes del estudio"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "iniciales": { "type": "string", "required": true },
+    "edad": { "type": "integer", "required": true, "min": 0, "max": 120 },
+    "sexo": { "type": "enumeration", "enum": ["M", "F"], "required": true },
+    "numeroHistoria": { "type": "string", "unique": true }
+  }
+}
